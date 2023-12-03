@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ShowProfileController;
+use App\Http\Controllers\HomeController;
 
 
 Route::get('/', function () {
@@ -12,10 +13,12 @@ Route::get('/', function () {
 
 // Views
 
+Route::get('/home', [HomeController::class, 'index']);
+Route::get('/members', [HomeController::class, 'members']);
+Route::get('/techer', [HomeController::class, 'techers']);
 
 
-
-
+/*
 //Controllerlar
 
 // php artisan make:controller UserController  -> Controoller xosil qilish
@@ -23,7 +26,7 @@ Route::get('/user/{name?}',[UserController::class,'show']);
 
 Route::get('/users', [UserController::class, 'list']);
 
-/*
+
 // Faqat bir vazifani bajaruvchi controllerlar
 // php artisan make:controller ShowProfileController --invokable
 Route::get('/show/{id}',ShowProfileController::class);
