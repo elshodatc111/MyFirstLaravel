@@ -7,6 +7,6 @@ use Illuminate\Http\Request;
 class UserController extends Controller
 {
     public function show($id=null){
-        return "UserID = ".$id;
+        return view('show');
     }
 }

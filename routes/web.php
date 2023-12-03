@@ -9,7 +9,15 @@ use App\Http\Controllers\ShowProfileController;
 Route::get('/', function () {
     return view('welcome');
 });
+
+// Views
+
+
+
+
+
 //Controllerlar
+
 // php artisan make:controller UserController  -> Controoller xosil qilish
 Route::get('/user/{id?}',[UserController::class,'show']);
 
@@ -18,7 +26,7 @@ Route::get('/user/{id?}',[UserController::class,'show']);
 Route::get('/show/{id}',ShowProfileController::class);
 
 
-
+// Router
 /*
 Route::get('/hello/{name}', function($name){
     return "Hello Worlid ".$name;
