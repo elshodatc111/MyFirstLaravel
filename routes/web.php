@@ -19,12 +19,15 @@ Route::get('/', function () {
 //Controllerlar
 
 // php artisan make:controller UserController  -> Controoller xosil qilish
-Route::get('/user/{id?}',[UserController::class,'show']);
+Route::get('/user/{name?}',[UserController::class,'show']);
 
+Route::get('/users', [UserController::class, 'list']);
+
+/*
 // Faqat bir vazifani bajaruvchi controllerlar
 // php artisan make:controller ShowProfileController --invokable
 Route::get('/show/{id}',ShowProfileController::class);
-
+*/
 
 // Router
 /*

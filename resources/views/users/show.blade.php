@@ -6,6 +6,6 @@
     <title>Show</title>
 </head>
 <body>
-    <h1>view metodi</h1>
+    <h1>view metodi {{$username}}</h1>
 </body>
 </html>
